@@ -13,10 +13,20 @@ Powerful plugin, that allows you to create code snippets & embed it into posts o
 == Description ==
 
 Using this plugin, you can create code chunks(or snippets) and use them in posts or pages on your site.  
-In one snippet you can use different code types: js, php, css, just set required tags. : `<?php ?>`, `<script></script>`, `<style></style>`.
+
+In one snippet you can use different code types: js, php, css, just set required tags.
+
+*  `<?php ?>` - for php code,
+*  `<script></script>`, - for js code,
+*  `<style></style>` - for stylesheets.
+
 Also you can test snippet code, before save it. 
-Watch to the screens, my English is lame, but i can show you plugin abilities on images.
-Great changes comind soon! "Aftamat4ik".
+
+My apologies, my English is lame, but i can show you plugin abilities on scheens.
+
+Thanks for your attention.
+
+Great changes coming soon!
 
 This plugin tested with wordpress 4.0 and wordpress 4.1
 
