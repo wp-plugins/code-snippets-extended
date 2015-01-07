@@ -38,10 +38,10 @@ Otherwise you can download zip archieve from link on that page and unpack it ins
 
 == Frequently Asked Questions ==
 
-= I need to use `<?php ?>` tags in my snippet? =
+= I need to use `&lt;?php ?&gt;` tags in my snippet? =
 Yes. You must use them to run php code inside snippet.
 
-= Can i use `<? ?>` tags? =
+= Can i use &lt;? ?&gt; tags? =
 No, sorry.
 
 = Please tell me editor commands. =
