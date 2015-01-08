@@ -20,19 +20,15 @@ In one snippet you can use different code types: js, php, css, just set required
 *  `<script></script>`, - for js code,
 *  `<style></style>` - for stylesheets.
 
-Also you can test snippet code, before save it. 
-
-My apologies, my English is lame, but i can show you plugin abilities on scheens.
+Also you can test snippet code, before save it.
+This plugin tested with wordpress 4.0 and wordpress 4.1
 
 Thanks for your attention.
-
 Great changes coming soon!
-
-This plugin tested with wordpress 4.0 and wordpress 4.1
 
 == Installation ==
 
-Easy as can be. You can install this plugon from Wordpress Admin. Just type into Search field Code Snippets Extended and Enjoy!
+Easy as can be. You can install this plugin from Wordpress Admin. Just type into Search field Code Snippets Extended and Enjoy!
 
 Otherwise you can download zip archieve from link on that page and unpack it inside your `/wp-content/plugins/` folder. Then just activate it from Admin.
 
