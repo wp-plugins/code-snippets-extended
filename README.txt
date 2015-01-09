@@ -21,7 +21,6 @@ In one snippet you can use different code types: js, php, css, just set required
 *  `<style></style>` - for stylesheets.
 
 Also you can test snippet code, before save it.
-This plugin tested with wordpress 4.0 and wordpress 4.1
 
 Thanks for your attention.
 Great changes coming soon!
