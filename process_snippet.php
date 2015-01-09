@@ -28,21 +28,25 @@ function proc_shortcode($data){
 	if($arr == false) return "";
 	$code = $arr[0]['code'];
 
-	preg_match('#<\?php([\s\S]+?)\?>#im',$code,$e_php);
+	preg_match_all('#<\?php([\s\S]+?)\?>#im',$code,$e_php);
 	if($e_php){
-		$res = "";
-		ob_start(); // Ловим вывод eval'а в основной буфер вывода
-		/**
-		 * 
-		 * Если вдруг вас интересует - как работают вложенные друг в друга ob_start, то вот тема на стековерфлов - http://stackoverflow.com/questions/10441410/what-happened-when-i-use-multi-ob-start-without-ob-end-clean-or-ob-end-flush
-		 * 
-		 */
+		foreach($e_php[1] as $key=>$tmp){
+			foreach($e_php[1] as $key=>$tmp){
+				$res = "";
+				ob_start(); // Ловим вывод eval'а в основной буфер вывода
+				/**
+				 * 
+				 * Если вдруг вас интересует - как работают вложенные друг в друга ob_start, то вот тема на стековерфлов - http://stackoverflow.com/questions/10441410/what-happened-when-i-use-multi-ob-start-without-ob-end-clean-or-ob-end-flush
+				 * 
+				 */
 
-		eval($e_php[1]);
-		$res = ob_get_contents();
-		ob_clean();
-		ob_end_flush();
-		$code = preg_replace('#<\?php([\s\S]+?)\?>#im',$res,$code);
+				eval($tmp);
+				$res = ob_get_contents();
+				ob_clean();
+				ob_end_flush();
+				$code = str_replace ( "<?php".$tmp."?>" , $res , $code);
+			}
+		}
 	}
 
 	return $code;
