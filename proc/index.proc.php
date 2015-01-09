@@ -13,7 +13,7 @@ if (!defined( 'ABSPATH' )){
 }
 
 if(!class_exists( 'WP_List_Table' )) { // еще один баг вротпресса... ну сколько можно, блджад! уже 3 бага насчитал...
-    include_once( ABSPATH . 'wp-admin/includes/class-wp-list-table.php' );
+    include_once( ABSPATH . WPINC . '/class-wp-list-table.php' );
 }
 
 class_alias('WP_List_Table', 'AftLT');	// некрасиво. Я не допускаю слеш в именах классов.
