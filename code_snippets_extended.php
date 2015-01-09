@@ -22,8 +22,8 @@ if (!defined( 'ABSPATH' )){
 }
 
 # Константы
-define( 'AFTCC__PLUGIN_URL', plugin_dir_url( __FILE__ ) );	// Урл папки плагина. Для подключения картинок и скриптов из внутренних папок
-define( 'AFTCC__PLUGIN_DIR', plugin_dir_path( __FILE__ ) );	// Системный путь до папки плагина, нужен для include_once
+define( 'AFTCC__PLUGIN_URL', dirname( __FILE__ ) );	// Урл папки плагина. Для подключения картинок и скриптов из внутренних папок
+define( 'AFTCC__PLUGIN_DIR', dirname( __FILE__ ) . "/" );	// Системный путь до папки плагина, нужен для include_once
 define( 'AFTCC__MAIN_FILE' , __FILE__ );					// Путь до главного (то есть до этого) файла плагина
 
 
