@@ -31,7 +31,7 @@ class AddSnippetProc{
 			$this->is_edit = 1;
 			global $wpdb;
 			$id = intval($_GET['snippet_id']);
-			$table_name = $wpdb->prefix.'aft_cc';
+			$table_name = $wpdb->base_prefix.'aft_cc';
 			$query = $wpdb->prepare("SELECT * FROM {$table_name}
 											WHERE `id` = '%d'", 
 												array(
@@ -66,7 +66,7 @@ class AddSnippetProc{
 		}
 
 		global $wpdb;
-		$table_name = $wpdb->prefix . "aft_cc";
+		$table_name = $wpdb->base_prefix . "aft_cc";
 
 		$ret = fasle;
 
