@@ -13,19 +13,17 @@ if (!defined( 'ABSPATH' )){
 }
 
 if(!class_exists( 'WP_List_Table' )) { // еще один баг вротпресса... ну сколько можно, блджад! уже 3 бага насчитал...
-    include_once( ABSPATH . WPINC . '/class-wp-list-table.php' );
+    require_once( ABSPATH . WPINC . '/class-wp-list-table.php' );
 }
 
-class_alias('WP_List_Table', 'AftLT');	// некрасиво. Я не допускаю слеш в именах классов.
-
-class CCListTable extends AftLT{
+class CCListTable extends WP_List_Table{
 	
 	# Конструктор
     function __construct(){
         parent::__construct(
 			array(
-				'singular'  => 'Сниппет',	//Название одной записи
-				'plural'    => 'Сниппеты',	//Название нескольких записей
+				'singular'  => __('Сниппет','acs'),	//Название одной записи
+				'plural'    => __('Сниппеты','acs'),	//Название нескольких записей
 				'ajax'      => false,		//Поддержка Ajax
 			)
 		);
@@ -38,7 +36,7 @@ class CCListTable extends AftLT{
 	
 	/**
 	 * 
-	 * Тут определеся какие данные будут каким колонкам соответствовать. У нас массив [{id:'0', title:'Название',....}], соответственно выборка будет $item['title'], $item['id'].
+	 * Тут определяется какие данные будут каким колонкам соответствовать. У нас массив [{id:'0', title:'Название',....}], соответственно выборка будет $item['title'], $item['id'].
 	 * В данном случае $column_name изменяется и принимает значения 'id','title' и другие, при итерациях цикла. Поэтому и выборка идет в виде: return $item[$column_name];
 	 * 
 	 */
@@ -49,7 +47,6 @@ class CCListTable extends AftLT{
 			case 'mode':
 			case 'code':
 				return $item[$column_name];
-				break;
 			default:
 				return print_r( $item, true ) ;	// По умолчанию распечатываем весь массив
 		}
@@ -137,44 +134,23 @@ class CCListTable extends AftLT{
 	 * Тут мы формируем массив данных, отображаемый при поиске и при перехода по страницам
 	 * Данные поиска, берутся из $_POST['s'], $page берется из $this->get_pagenum(); $num_items - количество элементов на одной странице
 	 */
-	function get_data_array($page, $num_items){
-		$page = $page - 1;	//Весь прикол в том, что ебаный вротперсс начинает отсчет страниц не с 0, как это в php, а с 1. Пизда тупая...
+	function get_data_array(){
 		global $wpdb;
 		$table_name = $wpdb->prefix.'aft_cc';
 		// Обычный запрос для первой страницы
-		$query = $wpdb->prepare("SELECT `title`,`mode`,`id` FROM `{$table_name}` LIMIT %d,%d",
-									array(
-										$page*$num_items,
-										$num_items,
-									)
-								);
+		$query = $wpdb->prepare("SELECT `title`,`mode`,`id` FROM `{$table_name}`", array());
 		// Запрос, содержащий строку поиска
 		$search = "";
 		if(isset($_POST['s']) && $_POST['s']){	// Если массив пуст его значение == false
 			$query = $wpdb->prepare("SELECT `title`,`mode`,`id` FROM `{$table_name}`
-									WHERE `title` LIKE %s LIMIT %d,%d", 
+									WHERE `title` LIKE %s", 
 										array(
 											'%'.like_escape($_POST['s']).'%',
-											$page*$num_items, 
-											$num_items,
 										)
 									);
 		}
 		
 		return $wpdb->get_results($query, ARRAY_A);	// ARRAY_A - ассоциативный массив, то же самое что и mysql_fetch_assoc
-	}
-	
-	/**
-	 * 
-	 * Возвращает кол-во записей в таблице. $def - количество, которое получается из count($found_data)
-	 * 
-	 */
-	function get_total_items($def){
-		global $wpdb;
-		$table_name = $wpdb->prefix.'aft_сс';
-		$count = $wpdb->get_var("SELECT COUNT(*) FROM {$table_name}");
-		if($count == null) return $def;
-		else return $count;
 	}
 	
 	/**
@@ -191,19 +167,20 @@ class CCListTable extends AftLT{
 		$this->_column_headers = array($columns, $hidden, $sortable);	// Задаем заголовки
 
 		$per_page = 10;				// Число элементов на одной странице
+		if(isset($_POST['s']) && $_POST['s']) $per_page = 1000;
 		$cp = $this->get_pagenum();	//$cp - не удержался, троллинг власти даже в коде весьма уместен
 		
-		$found_data = $this->get_data_array($cp, $per_page);		// Получение данных для конкретного представления
-		$total_items = $this->get_total_items(count($found_data));	// Получение общего количества элементов в таблице
+		$found_data = $this->get_data_array();		// Получение данных для конкретного представления
+		
 		usort($found_data, array( &$this, 'usort_reorder' ));		// Сортировка
 		
 		$this->set_pagination_args( 
 			array(
-				'total_items' => $total_items,
+				'total_items' => count($found_data),
 				'per_page'    => $per_page,
 			) 
 		);
-		$this->items = $found_data;	// Задаем содержимое таблицы
+		$this->items = array_slice($found_data,(($cp-1)*$per_page),$per_page);	// Задаем содержимое таблицы
 	}
 
 }

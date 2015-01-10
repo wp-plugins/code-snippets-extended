@@ -12,15 +12,8 @@ if (!defined( 'ABSPATH' )){
 	exit(__('Вызов файлов плагина напрямую запрещен.', 'acs'));
 }
 
-include_once(AFTCC__PLUGIN_DIR . "proc/index.proc.php");
-
-class IndexPage{
-	public $items_table;
-
-	function __construct() {
-		$this->items_table = new CCListTable();
-	}
-}
+require_once( AFTCC__PLUGIN_DIR . "proc/index.proc.php");
+$items_table = new CCListTable();
 
 # Действия - включить, выключить и удалить
 if(isset($_GET['action'])){
@@ -36,8 +29,7 @@ if(isset($_GET['action'])){
 }
 
 # Инициализация таблицы
-$main = new IndexPage();
-$main->items_table->prepare_items();
+$items_table->prepare_items();
 ?>
 
 
@@ -46,7 +38,7 @@ $main->items_table->prepare_items();
 		<a href="?page=aft_snippets/new_snippet" class="add-new-h2"><?php _e('Добавить','acs'); ?></a>
 	</h2>
 	<div class="aft_info">
-		<p><img style="width:60px;" src='<?php echo AFTCC__PLUGIN_URL . "/img/icon.png";?>' id="main_i"></img></p>
+		<p><img style="width:60px;" src='<?php echo AFTCC__PLUGIN_URL . "img/icon.png";?>' id="main_i"></img></p>
 		<p>
 			<?php _e('Плагин позволяющий размещать произвольные блоки кода в тексте материала.','acs'); ?>
 		</p>
@@ -56,8 +48,8 @@ $main->items_table->prepare_items();
 
 		<input type="hidden" name="page" value="clt_page" /> <!-- Этот параметр нужен для $_REQUEST['page'] --> 
 		<?php
-			$main->items_table->search_box(__('Поиск по названию','acs'), 'search_by_title');
-			$main->items_table->display(); 
+			$items_table->search_box(__('Поиск по названию','acs'), 'search_by_title');
+			$items_table->display(); 
 		?>
 	 </form>
 	 <p><?php _e('Автор', 'acs'); ?>: &copy; <a href="http://aftamat4ik.ru" target="_blank"><?php _e('ваш Гарри.','acs'); ?></a></p>
