@@ -15,6 +15,16 @@ if (!defined( 'ABSPATH' )){
 require_once( AFTCC__PLUGIN_DIR . "proc/index.proc.php");
 $items_table = new CCListTable();
 
+if(isset($_POST['snippets']) && $_POST['action']){
+	global $wpdb;
+	$table_name = $wpdb->prefix.'aft_cc';
+	if($_POST['action'] == "delete"){
+		foreach($_POST['snippets'] as $id){
+			$wpdb->delete( $table_name, array('id'=>$id));
+		}
+	}
+}
+
 # Действия - включить, выключить и удалить
 if(isset($_GET['action'])){
 	global $wpdb;

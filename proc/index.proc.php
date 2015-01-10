@@ -42,11 +42,12 @@ class CCListTable extends WP_List_Table{
 	 */
 	function column_default($item, $column_name) {
 		switch($column_name){ 
-			case 'id':
 			case 'title':
 			case 'mode':
 			case 'code':
 				return $item[$column_name];
+			case 'id':
+				return '[code_snippet id="'.$item['id'].'"]';
 			default:
 				return print_r( $item, true ) ;	// По умолчанию распечатываем весь массив
 		}
@@ -71,8 +72,8 @@ class CCListTable extends WP_List_Table{
 	 */
 	function get_columns(){
 		$columns = array(
-			//'cb'        	=> '<input type="checkbox" />',
-			'id' 			=> 'ID',
+			'cb'        	=> '<input type="checkbox" />',
+			'id' 			=> __('Код','acs'),
 			'title'    		=> __('Название','acs'),
 			'mode'	 		=> __('Состояние','acs'),	//Включено - выключено
 			'code' 			=> __('Код','acs'),
@@ -117,17 +118,17 @@ class CCListTable extends WP_List_Table{
 	 * Действия, которые можно применить для нескольких выбранных элементов
 	 * 
 	 */
-	/*
+	
 	function get_bulk_actions() {
 		$actions = array(
-			'delete'  => 'Удалить',
+			'delete'  => __('Удалить','acs'),
 		);
 		return $actions;
-	}*/
+	}
 
 	# Колонка с чекбоксом
 	function column_cb($item) {
-        //return sprintf('<input type="checkbox" name="parsers[]" value="%s" />', $item['ID']);    
+        return sprintf('<input type="checkbox" name="snippets[]" value="%s" />', $item['id']);    
     }
 	
 	/**
