@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Code Snippets Extended v1.0.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2015-01-10 14:32:37+0000\n"
+"PO-Revision-Date: 2015-01-10 14:36:53+0000\n"
 "Last-Translator: aftamat4ik <me@mail.com>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -66,7 +66,7 @@ msgstr " Zugriff verweigert!"
 #: ajax.php:34
 #@ acs
 msgid "Сниппеты еще не созданы."
-msgstr " Es wurde Noch kein Code Snippet erstellt."
+msgstr " Es wurde noch kein Code Snippet erstellt."
 
 #: ajax.php:44
 #@ acs
