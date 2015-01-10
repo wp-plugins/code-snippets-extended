@@ -15,6 +15,7 @@ jQuery(function($) {
 			editor.session.setMode({path:"ace/mode/php"});
 			editor.focus();
 		}
+		
 		/**** Тык на кнопку "тестировать шорткод" на странице добавления шорткода *******/
 		
 		if($("#test_code").length != 0)
@@ -44,7 +45,7 @@ jQuery(function($) {
 								    		$("a#select_snippet").on("click", function(){
 								    			id = $(this).parent().parent().find("td.st_id").html();
 								    			
-								    			wp.media.editor.insert('[code_snippet id="' + id + '"]');
+								    			wp.media.editor.insert(id);
 								    			$.magnificPopup.close();
 								    		});
 								    	  },

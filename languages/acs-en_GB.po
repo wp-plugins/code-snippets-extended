@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Code Snippets Extended v1.0.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2015-01-05 19:40:22+0000\n"
+"PO-Revision-Date: 2015-01-10 13:05:48+0000\n"
 "Last-Translator: aftamat4ik <me@mail.com>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -21,37 +21,36 @@ msgstr ""
 "X-Textdomain-Support: yes"
 
 #. translators: plugin header field 'Name'
-#: aft_code_snippets.php:0
+#: code_snippets_extended.php:0
 #@ acs
 msgid "Code Snippets Extended"
 msgstr ""
 
 #. translators: plugin header field 'PluginURI'
 #. translators: plugin header field 'AuthorURI'
-#: aft_code_snippets.php:0
+#: code_snippets_extended.php:0
 #@ acs
 msgid "http://aftamat4ik.ru/"
 msgstr ""
 
 #. translators: plugin header field 'Description'
-#: aft_code_snippets.php:0
+#: code_snippets_extended.php:0
 #@ acs
 msgid "Плагин, позволяющий размещать в постах php/js или css код. Позволяет создавать сниппеты из блоков кода и добавлять их простым кликом мыши."
 msgstr "Plugin, that allows you to place php/js or css code on your posts and pages easily. Merge code into snippets and add them by simple touch of a button!"
 
 #. translators: plugin header field 'Author'
-#: aft_code_snippets.php:0
+#: code_snippets_extended.php:0
 #@ acs
 msgid "Роман Кудашев"
 msgstr "Roman Kudashew"
 
 #. translators: plugin header field 'Version'
-#: aft_code_snippets.php:0
+#: code_snippets_extended.php:0
 #@ acs
 msgid "1.0.1"
 msgstr ""
 
-#: aft_code_snippets.php:27
 #: ajax.php:12
 #: functions.php:12
 #: main.php:12
@@ -61,7 +60,6 @@ msgstr ""
 #: proc/index.proc.php:12
 #: process_snippet.php:12
 #@ acs
-#@ aft_cc
 msgid "Вызов файлов плагина напрямую запрещен."
 msgstr "Acces Denied!"
 
@@ -75,24 +73,26 @@ msgstr "Code snippets not created yet."
 msgid "Выбрать"
 msgstr "Select"
 
-#: main.php:94
+#: main.php:99
 #@ acs
 msgid "Выберите сниппет"
 msgstr "Select snippet"
 
-#: main.php:94
+#: main.php:99
+#: proc/index.proc.php:25
 #@ acs
 msgid "Сниппет"
 msgstr "Snippet"
 
-#: main.php:108
-#: main.php:109
-#: main.php:117
+#: main.php:118
+#: main.php:119
+#: main.php:126
+#: proc/index.proc.php:26
 #@ acs
 msgid "Сниппеты"
 msgstr "Snippets"
 
-#: main.php:118
+#: main.php:128
 #: pages/add_snippet.php:86
 #@ acs
 msgid "Добавить сниппет"
@@ -143,32 +143,32 @@ msgstr "Test code"
 msgid "Обновить сниппет"
 msgstr "Update snippet"
 
-#: pages/index.php:45
+#: pages/index.php:37
 #@ acs
 msgid "Сниппеты кода."
 msgstr "Code Snippets."
 
-#: pages/index.php:46
+#: pages/index.php:38
 #@ acs
 msgid "Добавить"
 msgstr "New Snippet"
 
-#: pages/index.php:51
+#: pages/index.php:43
 #@ acs
 msgid "Плагин позволяющий размещать произвольные блоки кода в тексте материала."
 msgstr "Using this plugin you can place code snippets at your posts or pages."
 
-#: pages/index.php:59
+#: pages/index.php:51
 #@ acs
 msgid "Поиск по названию"
 msgstr "Search by title"
 
-#: pages/index.php:63
+#: pages/index.php:55
 #@ acs
 msgid "Автор"
 msgstr "Author"
 
-#: pages/index.php:63
+#: pages/index.php:55
 #@ acs
 msgid "ваш Гарри."
 msgstr "Roman Kudashew."
@@ -198,42 +198,43 @@ msgstr "Done!"
 msgid "К несчастью сниппет не может быть добавлен из-за проблем с базой данных."
 msgstr "Unfortunately snippet can not be added due to a problem with the database."
 
-#: proc/index.proc.php:36
+#: proc/index.proc.php:34
 #@ acs
 msgid "Данные отсутствуют."
 msgstr "Data not available."
 
-#: proc/index.proc.php:79
+#: proc/index.proc.php:77
 #@ acs
 msgid "Название"
 msgstr "Title"
 
-#: proc/index.proc.php:80
+#: proc/index.proc.php:78
 #@ acs
 msgid "Состояние"
 msgstr "State"
 
-#: proc/index.proc.php:81
+#: proc/index.proc.php:76
+#: proc/index.proc.php:79
 #@ acs
 msgid "Код"
 msgstr "Code"
 
-#: proc/index.proc.php:110
+#: proc/index.proc.php:108
 #@ acs
 msgid "Редактировать"
 msgstr "Edit"
 
-#: proc/index.proc.php:111
+#: proc/index.proc.php:109
 #@ acs
 msgid "Включить"
 msgstr "On"
 
-#: proc/index.proc.php:112
+#: proc/index.proc.php:110
 #@ acs
 msgid "Выключить"
 msgstr "Off"
 
-#: proc/index.proc.php:113
+#: proc/index.proc.php:111
 #@ acs
 msgid "Удалить"
 msgstr "Delete"
