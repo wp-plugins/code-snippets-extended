@@ -36,10 +36,10 @@ class AftCCAjax{
 		// Тут формирует html нашего iframe
 		$res  = "<div class='white_popup'>";
 		$res .= "<table class='snippets_table' cellspacing='0' border='1'>";
-		$res .= "<tbody><tr><th>Id</th><th>Name</th><th>+</th></tr>";
+		$res .= "<tbody><tr><th>+</th><th>Name</th><th>+</th></tr>";
 		foreach($arr as $snippet){
 			$res .= "<tr>";
-			$res .= "<td class='st_id'>".$snippet['id']."</td>";
+			$res .= "<td class='st_id'>[code_snippet id=\"".$snippet['id']."\"]</td>";
 			$res .= "<td class='st_title'>".$snippet['title']."</td>";
 			$res .= "<td class='st_actions'><a id='select_snippet' class='button-primary' href='#''>".__('Выбрать','acs'). "</a></td>";
 			$res .= "</tr>";

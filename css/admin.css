@@ -37,7 +37,7 @@ textarea[name=snippet_code]{
 	background-color:#FFDBA0;
 }
 
-.wp-list-table .column-id { width: 5%; }
+.wp-list-table .column-id { width: 20%; }
 /** Стили таблицы со списком доступных сниппетов **/
 table.snippets_table{
 	display: block;
@@ -64,7 +64,7 @@ table.snippets_table td{
 }
 
 table.snippets_table td.st_id{
-	width: 5%;
+	width: 20%;
 	text-align: center;
 }
 
