@@ -121,10 +121,10 @@ class AftCCMain{
 		$menu_slug 	= "aft_snippets/index";
 		$icon_url 	= AFTCC__PLUGIN_URL . "/img/admin-icon.png";
 		$position 	= null;
-		add_menu_page( $page_title, $menu_title, $capability, $menu_slug, array($this,'get_dashboard_page'), $icon_url, $position );	//Главный пунки меню админки
-		
+		add_menu_page( $page_title, $menu_title, $capability, $menu_slug, array($this,'get_dashboard_page'), $icon_url, $position );	//Главный пункт меню админки				
 		//Подпункты
 		add_submenu_page($menu_slug, $page_title, __('Сниппеты','acs') , $capability,  $menu_slug , array($this,'get_dashboard_page'));
+		
 		add_submenu_page($menu_slug, __('Добавить сниппет','acs') , __('Добавить сниппет','acs') , $capability,  'aft_snippets/new_snippet' , array($this,'add_new_snippet'));
 	}
 
