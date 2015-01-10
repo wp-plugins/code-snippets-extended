@@ -48,7 +48,7 @@ class AftCCMain{
 			$charset_collate .= " COLLATE {$wpdb->collate}";
 		}
 		
-		$table_name = $wpdb->prefix . 'aft_cc';
+		$table_name = $wpdb->base_prefix . 'aft_cc';
 
 		// Запрос. 
 		// mode - режим - on/off
@@ -72,7 +72,7 @@ class AftCCMain{
 	# Удаляем таблицы плагина
 	function delete_plugin_tables(){
 		global $wpdb;
-		$table_name = $wpdb->prefix . "aft_cc";
+		$table_name = $wpdb->base_prefix . "aft_cc";
 		$sql = "DROP TABLE IF EXISTS $table_name;";
 		$wpdb->query($sql);
 	}
