@@ -17,7 +17,7 @@ $items_table = new CCListTable();
 
 if(isset($_POST['snippets']) && $_POST['action']){
 	global $wpdb;
-	$table_name = $wpdb->prefix.'aft_cc';
+	$table_name = $wpdb->base_prefix.'aft_cc';
 	if($_POST['action'] == "delete"){
 		foreach($_POST['snippets'] as $id){
 			$wpdb->delete( $table_name, array('id'=>$id));
@@ -29,7 +29,7 @@ if(isset($_POST['snippets']) && $_POST['action']){
 if(isset($_GET['action'])){
 	global $wpdb;
 	$id = intval($_GET['snippet_id']);
-	$table_name = $wpdb->prefix.'aft_cc';
+	$table_name = $wpdb->base_prefix.'aft_cc';
 	if($_GET['action'] == "on")
 		$wpdb->update( $table_name, array('mode'=>'on'), array('id'=>$id));	// $wpdb->update( $table, $data, $where, $format = null, $where_format = null );
 	if($_GET['action'] == "off")

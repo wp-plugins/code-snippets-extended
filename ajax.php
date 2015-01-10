@@ -25,7 +25,7 @@ class AftCCAjax{
 		//check_ajax_referer( 'FasdaEEr1123SAB><asdW', 'nonce', true );	// Проверка безопасности. Если ключи нe совпадают - вызывается die();
 		// Всплывающую форму формируем тут.
 		global $wpdb;
-		$table_name = $wpdb->prefix.'aft_cc';
+		$table_name = $wpdb->base_prefix.'aft_cc';
 		$query = $wpdb->prepare("SELECT * FROM {$table_name}
 										WHERE `mode`='on'", 
 										array($id,)
