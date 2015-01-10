@@ -64,3 +64,8 @@ Also On - will enable snippet to work. Off - i think you already know what do th
 = 1.0 =
 * Traslations added
 * Changed js and css files embed mechanism
+
+== Thanks ==
+I express my gratitude to Jonas Dahl. He helped me with a lot of bugs.
+Jonas Dahl translated this plugin into Deutche ladguage.
+
