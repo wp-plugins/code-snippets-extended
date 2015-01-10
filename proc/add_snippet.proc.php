@@ -51,7 +51,7 @@ class AddSnippetProc{
 
 	# Добавляем сниппет в базу
 	function add_snippet_proc(){
-		$this->code = urldecode(stripslashes($_POST['snippet_code']));
+		$this->code = htmlspecialchars_decode(stripslashes($_POST['snippet_code']));
 		$this->title = htmlspecialchars(urldecode($_POST['title']));
 		$this->is_edit = intval($_POST['is_edit']);
 
