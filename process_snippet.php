@@ -19,7 +19,7 @@ add_shortcode( 'code_snippet', 'proc_shortcode');
 function proc_shortcode($data){
 	$id = $data['id'];
 	global $wpdb;
-	$table_name = $wpdb->prefix.'aft_cc';
+	$table_name = $wpdb->base_prefix.'aft_cc';
 	$query = $wpdb->prepare("SELECT * FROM {$table_name}
 									WHERE `id` = '%d' AND `mode`='on'", 
 									array($id,)

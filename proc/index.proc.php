@@ -137,7 +137,7 @@ class CCListTable extends WP_List_Table{
 	 */
 	function get_data_array(){
 		global $wpdb;
-		$table_name = $wpdb->prefix.'aft_cc';
+		$table_name = $wpdb->base_prefix.'aft_cc';
 		// Обычный запрос для первой страницы
 		$query = $wpdb->prepare("SELECT `title`,`mode`,`id` FROM `{$table_name}`", array());
 		// Запрос, содержащий строку поиска
