@@ -26,7 +26,7 @@ Great changes coming soon!
 
 
 I express my gratitude to Jonas Dahl. He helped me with a lot of bugs.
-Jonas Dahl translated this plugin into Deutche ladguage.
+Jonas Dahl translated this plugin into Deutche language.
 
 == Installation ==
 
@@ -71,5 +71,5 @@ Also On - will enable snippet to work. Off - i think you already know what do th
 == Thanks ==
 I express my gratitude to Jonas Dahl. He helped me with a lot of bugs.
 
-Jonas Dahl translated this plugin into Deutche ladguage.
+Jonas Dahl translated this plugin into Deutche language.
 
