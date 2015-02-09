@@ -78,6 +78,12 @@ table.snippets_table td.st_action{
 	text-align: center;
 }
 
+table.snippets_table td.st_act_code{
+	width: 20%;
+	text-align: center;
+}
+
+
 /** Выпадающее окно плагина magnific-popup **/
 div.white_popup{
 	position: relative;
