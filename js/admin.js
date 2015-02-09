@@ -33,22 +33,7 @@ jQuery(function($) {
 				});
 				return false;
 			});
-		
-		/** Показать окно выбора медиа файла **/
-		if($("#acs-insert-media-button").length != 0)
-			$("#acs-insert-media-button").click(function() {
-				formfield = $('#txt_img_url').attr('name');
-				tb_show('', 'media-upload.php?type=image&amp;TB_iframe=true');
-				return false;
-			});
-		
-		/** Медиа выбрано **/
-		window.send_to_editor = function(html) {
-			imgurl = $('img',html).attr('src');
-			$('#txt_img_url').val(imgurl);
-			tb_remove();
-		}
-		
+			
 		/** Тык на кнопку "Сниппет" над текстовым редактором при добавлении материала ****/
 		if($("#show_code_snippets").length != 0)
 			$("#show_code_snippets").magnificPopup({
@@ -67,5 +52,23 @@ jQuery(function($) {
 			    	close				: function() {}
 				}
 			});
+		
+		/** Показать окно выбора медиа файла **/
+		if($("#acs-insert-media-button").length != 0)
+			$("#acs-insert-media-button").click(function() {
+				formfield = $('#txt_img_url').attr('name');
+				tb_show('', 'media-upload.php?type=image&amp;TB_iframe=true');
+				return false;
+			});
+		
+		/** Медиа выбрано **/
+		if($("#show_code_snippets").length == 0)
+			window.send_to_editor = function(html) {
+				imgurl = $('img',html).attr('src');
+				$('#txt_img_url').val(imgurl);
+				tb_remove();
+			}
+		
+		
     });
 });
