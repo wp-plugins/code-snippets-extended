@@ -104,6 +104,7 @@ class AftCCMain{
 	function hook_admin_init() {
     	wp_enqueue_script('cse-admin', AFTCC__PLUGIN_URL . 'js/admin.js', array( 'jquery' ));
     	wp_enqueue_script('magnific-popup', AFTCC__PLUGIN_URL . 'js/jquery.magnific-popup.min.js', array( 'jquery' ));
+    	wp_enqueue_script('jq_base64', AFTCC__PLUGIN_URL . 'js/jquery_base64.js', array( 'jquery' ));
     	wp_enqueue_style( 'magnific-popup-styles', AFTCC__PLUGIN_URL."css/magnific-popup.css" );
     	wp_enqueue_style( 'admin-styles', AFTCC__PLUGIN_URL."css/admin.css" );
 		if (isset($_GET['page']) && strpos($_GET['page'], 'aft_snippets/') === 0) {

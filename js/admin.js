@@ -44,8 +44,14 @@ jQuery(function($) {
 			    	ajaxContentAdded	: function() {
 								    		$("a#select_snippet").on("click", function(){
 								    			id = $(this).parent().parent().find("td.st_id").html();
-								    			
 								    			wp.media.editor.insert(id);
+								    			$.magnificPopup.close();
+								    		});
+											
+											$("a#st_get_code").on("click", function(){
+								    			code = $(this).parent().attr("st_code");
+												code = $.base64.decode(code);
+								    			wp.media.editor.insert(code);
 								    			$.magnificPopup.close();
 								    		});
 								    	  },
