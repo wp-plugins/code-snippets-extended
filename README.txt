@@ -4,7 +4,7 @@ Donate link: http://aftamat4ik.ru/code_snippets_extended
 Tags: code, code snippets, php, css, js, snippets, ads
 Requires at least: 3.9
 Tested up to: 4.1
-Stable tag: 1.0.0
+Stable tag: 1.3.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -67,7 +67,10 @@ Also On - will enable snippet to work. Off - i think you already know what do th
 = 1.0 =
 * Traslations added
 * Changed js and css files embed mechanism
-
+= 1.0.1 =
+* Changed database access to be compatible with multisite wordpress configuration
+= 1.3.0 =
+* Added megia upload buton into snippet editor
 == Thanks ==
 I express my gratitude to Jonas Dahl. He helped me with a lot of bugs.
 

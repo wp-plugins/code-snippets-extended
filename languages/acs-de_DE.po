@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Code Snippets Extended v1.0.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2015-01-10 14:36:53+0000\n"
+"PO-Revision-Date: 2015-02-09 13:31:24+0000\n"
 "Last-Translator: aftamat4ik <me@mail.com>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -84,16 +84,16 @@ msgstr "Snippet auswählen"
 msgid "Сниппет"
 msgstr "Snippet"
 
-#: main.php:118
-#: main.php:119
-#: main.php:126
+#: main.php:124
+#: main.php:125
+#: main.php:132
 #: proc/index.proc.php:26
 #@ acs
 msgid "Сниппеты"
 msgstr "Snippets"
 
-#: main.php:128
-#: pages/add_snippet.php:86
+#: main.php:134
+#: pages/add_snippet.php:94
 #@ acs
 msgid "Добавить сниппет"
 msgstr "Snippet hinzufügen"
@@ -108,37 +108,37 @@ msgstr "Bezeichnung des Snippets"
 msgid "Код сниппета"
 msgstr "Code Snippet"
 
-#: pages/add_snippet.php:47
+#: pages/add_snippet.php:55
 #@ acs
 msgid "Короткая справка:"
 msgstr "Hinweis"
 
-#: pages/add_snippet.php:48
+#: pages/add_snippet.php:56
 #@ acs
 msgid "Поле \"Код Сниппета\" позволяет размещать на сайте php\\javascript или css код."
 msgstr "Füge beliebigen PHP-/JS- oder CSS-Code ins „Code Snippet“-Feld ein und beachte die Formatierung:"
 
-#: pages/add_snippet.php:51
+#: pages/add_snippet.php:59
 #@ acs
 msgid "Размещайте CSS код следующим образом:"
 msgstr "CSS muss wie folgt formatiert sein:"
 
-#: pages/add_snippet.php:55
+#: pages/add_snippet.php:63
 #@ acs
 msgid "Размещайте PHP код следующим образом:"
 msgstr "… PHP so:"
 
-#: pages/add_snippet.php:59
+#: pages/add_snippet.php:67
 #@ acs
 msgid "Размещайте js код следующим образом:"
 msgstr "… und Javascript:"
 
-#: pages/add_snippet.php:77
+#: pages/add_snippet.php:85
 #@ acs
 msgid "Тестировать"
 msgstr "Code überprüfen"
 
-#: pages/add_snippet.php:87
+#: pages/add_snippet.php:95
 #@ acs
 msgid "Обновить сниппет"
 msgstr "Snippet aktualisieren"
@@ -239,4 +239,9 @@ msgstr "Off"
 #@ acs
 msgid "Удалить"
 msgstr "Löschen"
+
+#: pages/add_snippet.php:42
+#@ acs
+msgid "Медиа"
+msgstr "Media"
 

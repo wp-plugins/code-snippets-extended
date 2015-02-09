@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Code Snippets Extended v1.0.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2015-01-10 13:05:48+0000\n"
+"PO-Revision-Date: 2015-02-09 13:30:52+0000\n"
 "Last-Translator: aftamat4ik <me@mail.com>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -84,16 +84,16 @@ msgstr "Select snippet"
 msgid "Сниппет"
 msgstr "Snippet"
 
-#: main.php:118
-#: main.php:119
-#: main.php:126
+#: main.php:124
+#: main.php:125
+#: main.php:132
 #: proc/index.proc.php:26
 #@ acs
 msgid "Сниппеты"
 msgstr "Snippets"
 
-#: main.php:128
-#: pages/add_snippet.php:86
+#: main.php:134
+#: pages/add_snippet.php:94
 #@ acs
 msgid "Добавить сниппет"
 msgstr "Add snippet"
@@ -108,67 +108,67 @@ msgstr "Snippet name"
 msgid "Код сниппета"
 msgstr "Snippet Code"
 
-#: pages/add_snippet.php:47
+#: pages/add_snippet.php:55
 #@ acs
 msgid "Короткая справка:"
 msgstr "Info"
 
-#: pages/add_snippet.php:48
+#: pages/add_snippet.php:56
 #@ acs
 msgid "Поле \"Код Сниппета\" позволяет размещать на сайте php\\javascript или css код."
 msgstr "Place your php|js or css code into \"Snippet Code\" field."
 
-#: pages/add_snippet.php:51
+#: pages/add_snippet.php:59
 #@ acs
 msgid "Размещайте CSS код следующим образом:"
 msgstr "Css must be used like this:"
 
-#: pages/add_snippet.php:55
+#: pages/add_snippet.php:63
 #@ acs
 msgid "Размещайте PHP код следующим образом:"
 msgstr "PHP must be used like this:"
 
-#: pages/add_snippet.php:59
+#: pages/add_snippet.php:67
 #@ acs
 msgid "Размещайте js код следующим образом:"
 msgstr "Javascript must be used like this:"
 
-#: pages/add_snippet.php:77
+#: pages/add_snippet.php:85
 #@ acs
 msgid "Тестировать"
 msgstr "Test code"
 
-#: pages/add_snippet.php:87
+#: pages/add_snippet.php:95
 #@ acs
 msgid "Обновить сниппет"
 msgstr "Update snippet"
 
-#: pages/index.php:37
+#: pages/index.php:47
 #@ acs
 msgid "Сниппеты кода."
 msgstr "Code Snippets."
 
-#: pages/index.php:38
+#: pages/index.php:48
 #@ acs
 msgid "Добавить"
 msgstr "New Snippet"
 
-#: pages/index.php:43
+#: pages/index.php:53
 #@ acs
 msgid "Плагин позволяющий размещать произвольные блоки кода в тексте материала."
 msgstr "Using this plugin you can place code snippets at your posts or pages."
 
-#: pages/index.php:51
+#: pages/index.php:61
 #@ acs
 msgid "Поиск по названию"
 msgstr "Search by title"
 
-#: pages/index.php:55
+#: pages/index.php:65
 #@ acs
 msgid "Автор"
 msgstr "Author"
 
-#: pages/index.php:55
+#: pages/index.php:65
 #@ acs
 msgid "ваш Гарри."
 msgstr "Roman Kudashew."
@@ -235,7 +235,13 @@ msgid "Выключить"
 msgstr "Off"
 
 #: proc/index.proc.php:111
+#: proc/index.proc.php:124
 #@ acs
 msgid "Удалить"
 msgstr "Delete"
+
+#: pages/add_snippet.php:42
+#@ acs
+msgid "Медиа"
+msgstr "Insert image"
 

@@ -106,8 +106,14 @@ class AftCCMain{
     	wp_enqueue_script('magnific-popup', AFTCC__PLUGIN_URL . 'js/jquery.magnific-popup.min.js', array( 'jquery' ));
     	wp_enqueue_style( 'magnific-popup-styles', AFTCC__PLUGIN_URL."css/magnific-popup.css" );
     	wp_enqueue_style( 'admin-styles', AFTCC__PLUGIN_URL."css/admin.css" );
-		
 		if (isset($_GET['page']) && strpos($_GET['page'], 'aft_snippets/') === 0) {
+			// media
+			wp_enqueue_style ('thickbox');
+			wp_enqueue_script('thickbox');
+			wp_enqueue_script('media-upload');
+			// иконки
+			wp_enqueue_style( 'dashicons' );
+			// редактор
 			wp_enqueue_script('ace-code-editor', AFTCC__PLUGIN_URL . 'js/ace_code_editor/ace.js', array( 'jquery' ));
 			wp_enqueue_script('ace-code-mode-php', AFTCC__PLUGIN_URL . 'js/ace_code_editor/mode-php.js', array( 'jquery' ));
 		}

@@ -3,7 +3,7 @@ msgstr ""
 "Project-Id-Version: Code Snippets Extended v1.0.1\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: \n"
-"PO-Revision-Date: 2015-01-05 21:06:32+0000\n"
+"PO-Revision-Date: 2015-02-09 13:30:18+0000\n"
 "Last-Translator: aftamat4ik <me@mail.com>\n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -73,25 +73,27 @@ msgstr "Code snippets not created yet."
 msgid "Выбрать"
 msgstr "Select"
 
-#: main.php:100
+#: main.php:99
 #@ acs
 msgid "Выберите сниппет"
 msgstr "Select snippet"
 
-#: main.php:100
+#: main.php:99
+#: proc/index.proc.php:25
 #@ acs
 msgid "Сниппет"
 msgstr "Snippet"
 
-#: main.php:114
-#: main.php:115
-#: main.php:123
+#: main.php:124
+#: main.php:125
+#: main.php:132
+#: proc/index.proc.php:26
 #@ acs
 msgid "Сниппеты"
 msgstr "Snippets"
 
-#: main.php:124
-#: pages/add_snippet.php:86
+#: main.php:134
+#: pages/add_snippet.php:94
 #@ acs
 msgid "Добавить сниппет"
 msgstr "Add snippet"
@@ -106,67 +108,67 @@ msgstr "Snippet name"
 msgid "Код сниппета"
 msgstr "Snippet Code"
 
-#: pages/add_snippet.php:47
+#: pages/add_snippet.php:55
 #@ acs
 msgid "Короткая справка:"
 msgstr "Info"
 
-#: pages/add_snippet.php:48
+#: pages/add_snippet.php:56
 #@ acs
 msgid "Поле \"Код Сниппета\" позволяет размещать на сайте php\\javascript или css код."
 msgstr "Place your php|js or css code into \"Snippet Code\" field."
 
-#: pages/add_snippet.php:51
+#: pages/add_snippet.php:59
 #@ acs
 msgid "Размещайте CSS код следующим образом:"
 msgstr "Css must be used like this:"
 
-#: pages/add_snippet.php:55
+#: pages/add_snippet.php:63
 #@ acs
 msgid "Размещайте PHP код следующим образом:"
 msgstr "PHP must be used like this:"
 
-#: pages/add_snippet.php:59
+#: pages/add_snippet.php:67
 #@ acs
 msgid "Размещайте js код следующим образом:"
 msgstr "Javascript must be used like this:"
 
-#: pages/add_snippet.php:77
+#: pages/add_snippet.php:85
 #@ acs
 msgid "Тестировать"
 msgstr "Test code"
 
-#: pages/add_snippet.php:87
+#: pages/add_snippet.php:95
 #@ acs
 msgid "Обновить сниппет"
 msgstr "Update snippet"
 
-#: pages/index.php:45
+#: pages/index.php:47
 #@ acs
 msgid "Сниппеты кода."
 msgstr "Code Snippets."
 
-#: pages/index.php:46
+#: pages/index.php:48
 #@ acs
 msgid "Добавить"
 msgstr "New Snippet"
 
-#: pages/index.php:51
+#: pages/index.php:53
 #@ acs
 msgid "Плагин позволяющий размещать произвольные блоки кода в тексте материала."
 msgstr "Using this plugin you can place code snippets at your posts or pages."
 
-#: pages/index.php:59
+#: pages/index.php:61
 #@ acs
 msgid "Поиск по названию"
 msgstr "Search by title"
 
-#: pages/index.php:63
+#: pages/index.php:65
 #@ acs
 msgid "Автор"
 msgstr "Author"
 
-#: pages/index.php:63
+#: pages/index.php:65
 #@ acs
 msgid "ваш Гарри."
 msgstr "Roman Kudashew."
@@ -196,43 +198,50 @@ msgstr "Done!"
 msgid "К несчастью сниппет не может быть добавлен из-за проблем с базой данных."
 msgstr "Unfortunately snippet can not be added due to a problem with the database."
 
-#: proc/index.proc.php:36
+#: proc/index.proc.php:34
 #@ acs
 msgid "Данные отсутствуют."
 msgstr "Data not available."
 
-#: proc/index.proc.php:79
+#: proc/index.proc.php:77
 #@ acs
 msgid "Название"
 msgstr "Title"
 
-#: proc/index.proc.php:80
+#: proc/index.proc.php:78
 #@ acs
 msgid "Состояние"
 msgstr "State"
 
-#: proc/index.proc.php:81
+#: proc/index.proc.php:76
+#: proc/index.proc.php:79
 #@ acs
 msgid "Код"
 msgstr "Code"
 
-#: proc/index.proc.php:110
+#: proc/index.proc.php:108
 #@ acs
 msgid "Редактировать"
 msgstr "Edit"
 
-#: proc/index.proc.php:111
+#: proc/index.proc.php:109
 #@ acs
 msgid "Включить"
 msgstr "On"
 
-#: proc/index.proc.php:112
+#: proc/index.proc.php:110
 #@ acs
 msgid "Выключить"
 msgstr "Off"
 
-#: proc/index.proc.php:113
+#: proc/index.proc.php:111
+#: proc/index.proc.php:124
 #@ acs
 msgid "Удалить"
 msgstr "Delete"
+
+#: pages/add_snippet.php:42
+#@ acs
+msgid "Медиа"
+msgstr "Insert image"
 

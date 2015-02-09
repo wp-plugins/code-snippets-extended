@@ -36,6 +36,14 @@ include_once(AFTCC__PLUGIN_DIR . "proc/add_snippet.proc.php");
 			<tr>
 				<th><?php _e('Код сниппета','acs'); ?></th>
 				<td>
+					<p>
+						<a href="#" id="acs-insert-media-button" class="button-primary" data-editor="content" title="Add Media">
+							<span class="dashicons dashicons-welcome-write-blog" style="margin-top:2px;"></span>
+							<?php _e("Медиа","acs"); ?>
+						</a>
+						<input id="txt_img_url" name="img_url" placeholder="url" style="width:500px; margin-left:5px;" type="text"></input>
+					</p>
+					<br />
 					<textarea name="snippet_code"><?php echo $snipp->code; ?></textarea>
 					<div id="s_code" />
 				</td>
