@@ -21,7 +21,7 @@ In one snippet you can use different code types: js, php, css, just set required
 *  `<style></style>` - for stylesheets.
 
 Also you can test snippet code, before save it.
-
+If you want to add your custom language support - write me email. We will translate this plugin together.
 Great changes coming soon!
 
 
