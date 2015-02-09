@@ -1,0 +1,247 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Code Snippets Extended v1.0.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: \n"
+"PO-Revision-Date: 2015-02-09 13:31:24+0000\n"
+"Last-Translator: aftamat4ik <me@mail.com>\n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: CSL v1.x\n"
+"X-Poedit-Language: English\n"
+"X-Poedit-Country: UNITED STATES\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: __;_e;__ngettext:1,2;_n:1,2;__ngettext_noop:1,2;_n_noop:1,2;_c,_nc:4c,1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;\n"
+"X-Poedit-Basepath: ../\n"
+"X-Poedit-Bookmarks: \n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Textdomain-Support: yes"
+
+#. translators: plugin header field 'Name'
+#: code_snippets_extended.php:0
+#@ acs
+msgid "Code Snippets Extended"
+msgstr ""
+
+#. translators: plugin header field 'PluginURI'
+#. translators: plugin header field 'AuthorURI'
+#: code_snippets_extended.php:0
+#@ acs
+msgid "http://aftamat4ik.ru/"
+msgstr ""
+
+#. translators: plugin header field 'Description'
+#: code_snippets_extended.php:0
+#@ acs
+msgid "Плагин, позволяющий размещать в постах php/js или css код. Позволяет создавать сниппеты из блоков кода и добавлять их простым кликом мыши."
+msgstr "Plugin, that allows you to place php/js or css code on your posts and pages easily. Merge code into snippets and add them by simple touch of a button!"
+
+#. translators: plugin header field 'Author'
+#: code_snippets_extended.php:0
+#@ acs
+msgid "Роман Кудашев"
+msgstr "Roman Kudashew"
+
+#. translators: plugin header field 'Version'
+#: code_snippets_extended.php:0
+#@ acs
+msgid "1.0.1"
+msgstr ""
+
+#: ajax.php:12
+#: functions.php:12
+#: main.php:12
+#: pages/add_snippet.php:12
+#: pages/index.php:12
+#: proc/add_snippet.proc.php:12
+#: proc/index.proc.php:12
+#: process_snippet.php:12
+#@ acs
+msgid "Вызов файлов плагина напрямую запрещен."
+msgstr " Zugriff verweigert!"
+
+#: ajax.php:34
+#@ acs
+msgid "Сниппеты еще не созданы."
+msgstr " Es wurde noch kein Code Snippet erstellt."
+
+#: ajax.php:44
+#@ acs
+msgid "Выбрать"
+msgstr "Auswählen"
+
+#: main.php:99
+#@ acs
+msgid "Выберите сниппет"
+msgstr "Snippet auswählen"
+
+#: main.php:99
+#: proc/index.proc.php:25
+#@ acs
+msgid "Сниппет"
+msgstr "Snippet"
+
+#: main.php:124
+#: main.php:125
+#: main.php:132
+#: proc/index.proc.php:26
+#@ acs
+msgid "Сниппеты"
+msgstr "Snippets"
+
+#: main.php:134
+#: pages/add_snippet.php:94
+#@ acs
+msgid "Добавить сниппет"
+msgstr "Snippet hinzufügen"
+
+#: pages/add_snippet.php:33
+#@ acs
+msgid "Название сниппета"
+msgstr "Bezeichnung des Snippets"
+
+#: pages/add_snippet.php:37
+#@ acs
+msgid "Код сниппета"
+msgstr "Code Snippet"
+
+#: pages/add_snippet.php:55
+#@ acs
+msgid "Короткая справка:"
+msgstr "Hinweis"
+
+#: pages/add_snippet.php:56
+#@ acs
+msgid "Поле \"Код Сниппета\" позволяет размещать на сайте php\\javascript или css код."
+msgstr "Füge beliebigen PHP-/JS- oder CSS-Code ins „Code Snippet“-Feld ein und beachte die Formatierung:"
+
+#: pages/add_snippet.php:59
+#@ acs
+msgid "Размещайте CSS код следующим образом:"
+msgstr "CSS muss wie folgt formatiert sein:"
+
+#: pages/add_snippet.php:63
+#@ acs
+msgid "Размещайте PHP код следующим образом:"
+msgstr "… PHP so:"
+
+#: pages/add_snippet.php:67
+#@ acs
+msgid "Размещайте js код следующим образом:"
+msgstr "… und Javascript:"
+
+#: pages/add_snippet.php:85
+#@ acs
+msgid "Тестировать"
+msgstr "Code überprüfen"
+
+#: pages/add_snippet.php:95
+#@ acs
+msgid "Обновить сниппет"
+msgstr "Snippet aktualisieren"
+
+#: pages/index.php:47
+#@ acs
+msgid "Сниппеты кода."
+msgstr "Code Snippets."
+
+#: pages/index.php:48
+#@ acs
+msgid "Добавить"
+msgstr "Hinzufügen"
+
+#: pages/index.php:53
+#@ acs
+msgid "Плагин позволяющий размещать произвольные блоки кода в тексте материала."
+msgstr "Mit diesem Plugin können PHP-/JS- oder auch CSS-Code-Snippets in Posts oder Pages eingefügt werden."
+
+#: pages/index.php:61
+#@ acs
+msgid "Поиск по названию"
+msgstr "Suche nach Bezeichnung"
+
+#: pages/index.php:65
+#@ acs
+msgid "Автор"
+msgstr "Author"
+
+#: pages/index.php:65
+#@ acs
+msgid "ваш Гарри."
+msgstr "Roman Kudashev."
+
+#: proc/add_snippet.proc.php:46
+#@ acs
+msgid "Данные для редактирования не доступны"
+msgstr "Diese Daten sind nicht verfügbar"
+
+#: proc/add_snippet.proc.php:59
+#@ acs
+msgid "Сохранение не выполнено, пожалуйста укажите название сниппета"
+msgstr "Bitte eine Bezeichnung eingeben"
+
+#: proc/add_snippet.proc.php:64
+#@ acs
+msgid "Сохранение не выполнено, вы не указали код сниппета"
+msgstr "Bitte den Code eingeben"
+
+#: proc/add_snippet.proc.php:96
+#@ acs
+msgid "Готово!"
+msgstr "Vorgang abgeschlossen!"
+
+#: proc/add_snippet.proc.php:97
+#@ acs
+msgid "К несчастью сниппет не может быть добавлен из-за проблем с базой данных."
+msgstr "Aufgrund eines Fehlers in der Datenbank konnte das Snippet leider nicht hinzugefügt werden."
+
+#: proc/index.proc.php:34
+#@ acs
+msgid "Данные отсутствуют."
+msgstr "Keine Daten verfügbar"
+
+#: proc/index.proc.php:77
+#@ acs
+msgid "Название"
+msgstr "Bezeichnung"
+
+#: proc/index.proc.php:78
+#@ acs
+msgid "Состояние"
+msgstr "Status"
+
+#: proc/index.proc.php:76
+#: proc/index.proc.php:79
+#@ acs
+msgid "Код"
+msgstr "Code"
+
+#: proc/index.proc.php:108
+#@ acs
+msgid "Редактировать"
+msgstr "Bearbeiten"
+
+#: proc/index.proc.php:109
+#@ acs
+msgid "Включить"
+msgstr "On"
+
+#: proc/index.proc.php:110
+#@ acs
+msgid "Выключить"
+msgstr "Off"
+
+#: proc/index.proc.php:111
+#: proc/index.proc.php:124
+#@ acs
+msgid "Удалить"
+msgstr "Löschen"
+
+#: pages/add_snippet.php:42
+#@ acs
+msgid "Медиа"
+msgstr "Media"
+
