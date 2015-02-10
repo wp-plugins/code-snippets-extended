@@ -68,7 +68,7 @@ class AddSnippetProc{
 		global $wpdb;
 		$table_name = $wpdb->base_prefix . "aft_cc";
 
-		$ret = fasle;
+		$ret = false;
 
 		if($this->is_edit == 0){ // Сохранение нового сниппета
 			$ret = $wpdb->insert( 

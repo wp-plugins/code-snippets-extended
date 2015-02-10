@@ -146,7 +146,7 @@ class CCListTable extends WP_List_Table{
 			$query = $wpdb->prepare("SELECT `title`,`mode`,`id` FROM `{$table_name}`
 									WHERE `title` LIKE %s", 
 										array(
-											'%'.like_escape($_POST['s']).'%',
+											'%'.$wpdb->esc_like($_POST['s']).'%',
 										)
 									);
 		}
