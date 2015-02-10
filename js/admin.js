@@ -50,7 +50,7 @@ jQuery(function($) {
 											
 											$("a#st_get_code").on("click", function(){
 								    			code = $(this).parent().attr("st_code");
-												code = $.base64.decode(code);
+												code = Base64.decode(code);
 								    			wp.media.editor.insert(code);
 								    			$.magnificPopup.close();
 								    		});
