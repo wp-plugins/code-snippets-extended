@@ -28,7 +28,7 @@ function proc_shortcode($data){
 	if($arr == false) return "";
 	$code = $arr[0]['code'];
 
-	preg_match_all('#<\?php([\s\S]+?)\?>#im',$code,$e_php);
+	preg_match_all('#<\?php([\s\S]+?)\?>#imu',$code,$e_php);
 	if($e_php){
 		foreach($e_php[1] as $key=>$tmp){
 			$res = "";
@@ -43,7 +43,7 @@ function proc_shortcode($data){
 			$res = ob_get_contents();
 			ob_clean();
 			ob_end_flush();
-			$code = str_replace ( "<?php".$tmp."?>" , $res , $code);
+			$code = str_replace ( $e_php[0][$key] , $res , $code);
 		}
 	}
 
