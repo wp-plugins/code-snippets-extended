@@ -7,7 +7,7 @@
  */
 
 # Защита от мудаков
-if (!defined( 'ABSPATH' )){
+if (!defined( 'AFTCC__MAIN_FILE' )){
 	header('HTTP/1.0 403 Forbidden');
 	exit(__('Вызов файлов плагина напрямую запрещен.', 'acs'));
 }
