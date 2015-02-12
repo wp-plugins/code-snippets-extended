@@ -12,7 +12,7 @@ Powerful plugin, that allows you to create code snippets & embed it into posts o
 
 == Description ==
 
-Using this plugin, you can create code chunks(or snippets) and use them in posts or pages on your site.  
+Using this plugin you can place code snippets into your posts or pages.  
 
 In one snippet you can use different code types: js, php, css, just set required tags.
 
