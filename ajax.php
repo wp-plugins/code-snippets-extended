@@ -58,26 +58,20 @@ class AftCCAjax{
 	function test_code(){
 		check_ajax_referer( 'FasdaEEr1123SAB><asdW', 'nonce', true );
 		$code = urldecode(stripslashes($_POST['code']));
-
-		preg_match_all('#<\?php([\s\S]+?)\?>#i',$code,$e_php);
-		if($e_php)
-			foreach($e_php[1] as $key=>$tmp){
-				$res = "";
-				ob_start(); // Ловим вывод eval'а в основной буфер вывода
+		
+		ob_start(); // Ловим вывод eval'а в основной буфер вывода
 				/**
 				 * 
-				 * Если вдруг вас интересует - как работают вложенные друг в друга ob_start, то вот тема на стековерфлов - http://stackoverflow.com/questions/10441410/what-happened-when-i-use-multi-ob-start-without-ob-end-clean-or-ob-end-flush
+				 * Если вдруг вас интересует - как работают вложенные друг в друга ob_start, то вот тема на стековерфлов -  
+				 * http://stackoverflow.com/questions/10441410/what-happened-when-i-use-multi-ob-start-without-ob-end-clean-or-ob-end-flush
 				 * 
 				 */
-
-				eval($tmp);
-				$res = ob_get_contents();
-				ob_clean();
-				ob_end_flush();
-				$code = str_replace ( "<?php".$tmp."?>" , $res , $code);
-			}
+		eval("?> ".$code. " <?php;");
+		$res = ob_get_contents();
+		ob_clean();
+		ob_end_flush();
 		
-		echo $code;
+		echo $res;
 		die();
 	}
 }

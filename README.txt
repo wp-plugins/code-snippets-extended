@@ -4,7 +4,7 @@ Donate link: http://aftamat4ik.ru/code_snippets_extended
 Tags: code, code snippets, php, css, js, snippets, ads
 Requires at least: 3.9
 Tested up to: 4.1
-Stable tag: 1.3.0
+Stable tag: 1.3.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -12,7 +12,7 @@ Powerful plugin, that allows you to create code snippets & embed it into posts o
 
 == Description ==
 
-Using this plugin you can place code snippets into your posts or pages.  
+Using this plugin, you can create code chunks(or snippets) and use them in posts or pages on your site.  
 
 In one snippet you can use different code types: js, php, css, just set required tags.
 
@@ -71,6 +71,8 @@ Also On - will enable snippet to work. Off - i think you already know what do th
 * Changed database access to be compatible with multisite wordpress configuration
 = 1.3.0 =
 * Added megia upload buton into snippet editor
+=1.3.1=
+*Fixed eval bug
 == Thanks ==
 I express my gratitude to Jonas Dahl. He helped me with a lot of bugs.
 

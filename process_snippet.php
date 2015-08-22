@@ -27,26 +27,13 @@ function proc_shortcode($data){
 	$arr = $wpdb->get_results($query, ARRAY_A);
 	if($arr == false) return "";
 	$code = $arr[0]['code'];
+	
+	ob_start();
+	eval("?> ".$code. " <?php;");
+	$res = ob_get_contents();
+	ob_clean();
+	ob_end_flush();
 
-	preg_match_all('#<\?php([\s\S]+?)\?>#imu',$code,$e_php);
-	if($e_php){
-		foreach($e_php[1] as $key=>$tmp){
-			$res = "";
-			ob_start(); // Ловим вывод eval'а в основной буфер вывода
-			/**
-			 * 
-			 * Если вдруг вас интересует - как работают вложенные друг в друга ob_start, то вот тема на стековерфлов - http://stackoverflow.com/questions/10441410/what-happened-when-i-use-multi-ob-start-without-ob-end-clean-or-ob-end-flush
-			 * 
-			 */
-
-			eval($tmp);
-			$res = ob_get_contents();
-			ob_clean();
-			ob_end_flush();
-			$code = str_replace ( $e_php[0][$key] , $res , $code);
-		}
-	}
-
-	return $code;
+	return $res;
 }
 // end of file //
