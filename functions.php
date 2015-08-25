@@ -9,5 +9,5 @@
 # Защита от мудаков
 if (!defined( 'ABSPATH' )){
 	header('HTTP/1.0 403 Forbidden');
-	exit(__('Вызов файлов плагина напрямую запрещен.', 'acs'));
+	exit(__('Access Denied.', 'acs'));
 }

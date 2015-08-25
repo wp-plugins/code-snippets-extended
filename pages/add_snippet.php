@@ -9,7 +9,7 @@
 # Защита от мудаков
 if (!defined( 'AFTCC__MAIN_FILE' )){
 	header('HTTP/1.0 403 Forbidden');
-	exit(__('Вызов файлов плагина напрямую запрещен.', 'acs'));
+	exit(__('Access Denied.', 'acs'));
 }
 
 include_once(AFTCC__PLUGIN_DIR . "proc/add_snippet.proc.php");
@@ -30,16 +30,16 @@ include_once(AFTCC__PLUGIN_DIR . "proc/add_snippet.proc.php");
 		<input type="hidden" value="<?php echo $snipp->is_edit; ?>" name="is_edit" />
 		<table class="form-table">
 			<tr>
-				<th><?php _e('Название сниппета','acs'); ?></th>
+				<th><?php _e('Snippet Name','acs'); ?></th>
 				<td><input type="text" name="title" placeholder="title" value="<?php echo $snipp->title; ?>" /></td>
 			</tr>
 			<tr>
-				<th><?php _e('Код сниппета','acs'); ?></th>
+				<th><?php _e('Snippet Code','acs'); ?></th>
 				<td>
 					<p>
 						<a href="#" id="acs-insert-media-button" class="button-primary" data-editor="content" title="Add Media">
 							<span class="dashicons dashicons-welcome-write-blog" style="margin-top:2px;"></span>
-							<?php _e("Медиа","acs"); ?>
+							<?php _e("Pick media","acs"); ?>
 						</a>
 						<input id="txt_img_url" name="img_url" placeholder="url" style="width:500px; margin-left:5px;" type="text"></input>
 					</p>
@@ -52,20 +52,28 @@ include_once(AFTCC__PLUGIN_DIR . "proc/add_snippet.proc.php");
 				<th></th>
 				<td>
 					<div class="aft_info">
-						<strong><?php _e('Короткая справка:','acs'); ?></strong>
-						<p><?php _e('Поле "Код Сниппета" позволяет размещать на сайте php\javascript или css код.','acs'); ?></p>
+						<strong><?php _e('Small info:','acs'); ?></strong>
+						<p><?php _e('Snippet Code field allows you to write js, html or css code.','acs'); ?></p>
 						<ul>
 							<li class="aft_data_info">
-								<?php _e('Размещайте CSS код следующим образом:','acs'); ?> <br>
+								<b><?php _e('Plase CSS like that:','acs'); ?></b><br>
 								&lt;style&gt; #main{ display:block; } &lt;/style&gt;
 							</li>
 							<li class="aft_data_info">
-								<?php _e('Размещайте PHP код следующим образом:','acs'); ?> <br>
+								<?php _e('Plase PHP like that:','acs'); ?><br>
 								&lt;?php echo "123"; ?&gt;
 							</li>
 							<li class="aft_data_info">
-								<?php _e('Размещайте js код следующим образом:','acs'); ?> <br>
-								&lt;script type="text/javascript"&gt; alert("Hello World!"); &lt;/script&gt;
+								<b><?php _e('Plase JS like that:','acs'); ?></b>
+								<p>&lt;script type="text/javascript"&gt; alert("Hello World!"); &lt;/script&gt;</p>
+							</li>
+							<li class="aft_data_info">
+								<b><?php _e('For JQuery:', 'acs'); ?></b><br>
+								&lt;script type="text/javascript"&gt; jQuery(function($) {<br>
+											$(document).ready(function(){<br>
+												// write your code here<br>
+											});<br> });<br>
+								&lt;/script&gt;<br>
 							</li>
 						</ul>
 					</div>
@@ -82,7 +90,7 @@ include_once(AFTCC__PLUGIN_DIR . "proc/add_snippet.proc.php");
 			<script type="text/javascript">
 				var nonce_data = "<?php echo $ajax_nonce; ?>";
 			</script>
-			<a id="test_code" class="button-primary" href="#"><?php _e('Тестировать','acs');  ?></a>
+			<a id="test_code" class="button-primary" href="#"><?php _e('Test','acs');  ?></a>
 
 			<?php
 			/**
@@ -91,8 +99,8 @@ include_once(AFTCC__PLUGIN_DIR . "proc/add_snippet.proc.php");
 			?>
 
 			<input type="submit" class="button-primary" name="submit" value="<?php 
-				if($snipp->is_edit == 0) _e('Добавить сниппет','acs'); 
-				else _e('Обновить сниппет','acs');  
+				if($snipp->is_edit == 0) _e('Save Snippet','acs'); 
+				else _e('Update Snippet','acs');  
 			?>" />
 		</p>
 		

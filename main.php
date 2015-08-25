@@ -9,7 +9,7 @@
 # Защита от мудаков
 if (!defined( 'ABSPATH' )){
 	header('HTTP/1.0 403 Forbidden');
-	exit(__('Вызов файлов плагина напрямую запрещен.', 'acs'));
+	exit(__('Access Denied.', 'acs'));
 }
 
 class AftCCMain{
@@ -96,7 +96,7 @@ class AftCCMain{
 
 		$url = admin_url( "/admin-ajax.php?post_id=" . $iframe_post_id . "&action=aftcb_show_form&nonce=" . $ajax_nonce . "&TB_iframe=true&width=768" );	// Ajax обработчик мжно создавать просто формирую GET запрос к файлу admin-ajax.php
 		//echo '<a id="show_code_snippets" class="button thickbox" title="'.__('Выберите сниппет','acs').'" data-editor="content" href="'.$url.'">'.__('Сниппет', 'acs').'</a>';
-		echo '<a id="show_code_snippets" class="button" title="'.__('Выберите сниппет','acs').'" data-editor="content" href="'.$url.'"><span class="wp-media-aft-snippets"></span>'.__('Сниппет', 'acs').'</a>';
+		echo '<a id="show_code_snippets" class="button" title="'.__('Select Snippet','acs').'" data-editor="content" href="'.$url.'"><span class="wp-media-aft-snippets"></span>'.__('Insert Snippet', 'acs').'</a>';
 		
 	}
 
@@ -122,17 +122,17 @@ class AftCCMain{
 
 	# Формируем меню
 	function get_plugin_menu(){
-		$page_title = __("Сниппеты",'acs');
-		$menu_title = __("Сниппеты",'acs');
+		$page_title = __("Snippets",'acs');
+		$menu_title = __("Snippets",'acs');
 		$capability = "manage_options";
 		$menu_slug 	= "aft_snippets/index";
 		$icon_url 	= AFTCC__PLUGIN_URL . "/img/admin-icon.png";
 		$position 	= null;
 		add_menu_page( $page_title, $menu_title, $capability, $menu_slug, array($this,'get_dashboard_page'), $icon_url, $position );	//Главный пункт меню админки				
 		//Подпункты
-		add_submenu_page($menu_slug, $page_title, __('Сниппеты','acs') , $capability,  $menu_slug , array($this,'get_dashboard_page'));
+		add_submenu_page($menu_slug, $page_title, __('Snippets','acs') , $capability,  $menu_slug , array($this,'get_dashboard_page'));
 		
-		add_submenu_page($menu_slug, __('Добавить сниппет','acs') , __('Добавить сниппет','acs') , $capability,  'aft_snippets/new_snippet' , array($this,'add_new_snippet'));
+		add_submenu_page($menu_slug, __('Add Snippet','acs') , __('Add Snippet','acs') , $capability,  'aft_snippets/new_snippet' , array($this,'add_new_snippet'));
 	}
 
 	# Пункт меню - Главная страница

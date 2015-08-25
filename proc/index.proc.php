@@ -9,7 +9,7 @@
 # Защита от мудаков
 if (!defined( 'ABSPATH' )){
 	header('HTTP/1.0 403 Forbidden');
-	exit(__('Вызов файлов плагина напрямую запрещен.', 'acs'));
+	exit(__('Access Denied.', 'acs'));
 }
 
 if(!class_exists( 'WP_List_Table' )) { // еще один баг вротпресса... ну сколько можно, блджад! уже 3 бага насчитал...
@@ -22,8 +22,8 @@ class CCListTable extends WP_List_Table{
     function __construct(){
         parent::__construct(
 			array(
-				'singular'  => __('Сниппет','acs'),	//Название одной записи
-				'plural'    => __('Сниппеты','acs'),	//Название нескольких записей
+				'singular'  => __('Snippet','acs'),	//Название одной записи
+				'plural'    => __('Snippets','acs'),	//Название нескольких записей
 				'ajax'      => false,		//Поддержка Ajax
 			)
 		);
@@ -31,7 +31,7 @@ class CCListTable extends WP_List_Table{
  
 	 # Если данных нет
 	function no_items(){
-		_e('Данные отсутствуют.','acs');
+		_e('Data not found.','acs');
 	}
 	
 	/**
@@ -73,10 +73,9 @@ class CCListTable extends WP_List_Table{
 	function get_columns(){
 		$columns = array(
 			'cb'        	=> '<input type="checkbox" />',
-			'id' 			=> __('Код','acs'),
-			'title'    		=> __('Название','acs'),
-			'mode'	 		=> __('Состояние','acs'),	//Включено - выключено
-			'code' 			=> __('Код','acs'),
+			'id' 			=> __('Code','acs'),
+			'title'    		=> __('Name','acs'),
+			'mode'	 		=> __('State','acs'),	//Включено - выключено
 			);
 		return $columns;
     }
@@ -105,10 +104,10 @@ class CCListTable extends WP_List_Table{
 		$edit_page_url = "aft_snippets/new_snippet";
 		
 		$actions = array(
-			'edit'	=> sprintf('<a href="?page=%s&action=%s&snippet_id=%s">'.__('Редактировать','acs').'</a>', $edit_page_url, 'edit', $item['id']),
-			'on'	=> sprintf('<a href="?page=%s&action=%s&snippet_id=%s">'.__('Включить','acs').'</a>', $_REQUEST['page'], 'on', $item['id']),
-			'off'	=> sprintf('<a href="?page=%s&action=%s&snippet_id=%s">'.__('Выключить','acs').'</a>', $_REQUEST['page'], 'off', $item['id']),
-			'delete'=> sprintf('<a href="?page=%s&action=%s&snippet_id=%s">'.__('Удалить', 'acs').'</a>', $_REQUEST['page'], 'delete', $item['id']),
+			'edit'	=> sprintf('<a href="?page=%s&action=%s&snippet_id=%s">'.__('Edit','acs').'</a>', $edit_page_url, 'edit', $item['id']),
+			'on'	=> sprintf('<a href="?page=%s&action=%s&snippet_id=%s">'.__('On','acs').'</a>', $_REQUEST['page'], 'on', $item['id']),
+			'off'	=> sprintf('<a href="?page=%s&action=%s&snippet_id=%s">'.__('Off','acs').'</a>', $_REQUEST['page'], 'off', $item['id']),
+			'delete'=> sprintf('<a href="?page=%s&action=%s&snippet_id=%s">'.__('Delete', 'acs').'</a>', $_REQUEST['page'], 'delete', $item['id']),
 		);
 		return sprintf('%1$s %2$s', $item['title'], $this->row_actions($actions));
 	}
@@ -121,7 +120,7 @@ class CCListTable extends WP_List_Table{
 	
 	function get_bulk_actions() {
 		$actions = array(
-			'delete'  => __('Удалить','acs'),
+			'delete'  => __('Delete','acs'),
 		);
 		return $actions;
 	}

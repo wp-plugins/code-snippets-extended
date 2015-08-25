@@ -9,7 +9,7 @@
 # Защита от мудаков
 if (!defined( 'ABSPATH' )){
 	header('HTTP/1.0 403 Forbidden');
-	exit(__('Вызов файлов плагина напрямую запрещен.', 'acs'));
+	exit(__('Access Denied.', 'acs'));
 }
 
 class AftCCAjax{
@@ -31,7 +31,7 @@ class AftCCAjax{
 										array($id,)
 										);
 		$arr = $wpdb->get_results($query, ARRAY_A);
-		if(count($arr) == 0){ echo "<div class='white_popup'>" . __('Сниппеты еще не созданы.','acs') . "<p></div>"; die();
+		if(count($arr) == 0){ echo "<div class='white_popup'>" . __('Snippets not creted Yet.','acs') . "<p></div>"; die();
 		}
 		// Тут формирует html нашего iframe
 		$res  = "<div class='white_popup'>";
@@ -41,8 +41,8 @@ class AftCCAjax{
 			$res .= "<tr>";
 			$res .= "<td class='st_id'>[code_snippet id=\"".$snippet['id']."\"]</td>";
 			$res .= "<td class='st_title'>".$snippet['title']."</td>";
-			$res .= "<td class='st_actions'><a id='select_snippet' class='button-primary' href='#''>".__('Выбрать','acs'). "</a></td>";
-			$res .= "<td class='st_act_code' st_code='".base64_encode($snippet['code'])."'><a id='st_get_code' class='button-primary' href='#''>".__('Код','acs'). "</a></td>";
+			$res .= "<td class='st_actions'><a id='select_snippet' class='button-primary' href='#''>".__('Select','acs'). "</a></td>";
+			$res .= "<td class='st_act_code' st_code='".base64_encode($snippet['code'])."'><a id='st_get_code' class='button-primary' href='#''>".__('Code','acs'). "</a></td>";
 			$res .= "</tr>";
 		}
 

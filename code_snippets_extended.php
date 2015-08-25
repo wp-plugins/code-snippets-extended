@@ -7,9 +7,9 @@
  *
  *	Plugin Name: Code Snippets Extended
  *	Plugin URI: http://aftamat4ik.ru/
- *	Description: Плагин, позволяющий размещать в постах php/js или css код. Позволяет создавать сниппеты из блоков кода и добавлять их простым кликом мыши.
- *	Version: 1.3.1
- *	Author: Роман Кудашев
+ *	Description: Plugin to crete snippets from JS, PHP or CSS code
+ *	Version: 1.3.2
+ *	Author: Kudashev Roman
  *	Author URI: http://aftamat4ik.ru/
  *	License: GPLv2 or later
  *  Text Domain: acs

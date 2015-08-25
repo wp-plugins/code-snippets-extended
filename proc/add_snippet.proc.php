@@ -9,7 +9,7 @@
 # Защита от мудаков
 if (!defined( 'AFTCC__MAIN_FILE' )){
 	header('HTTP/1.0 403 Forbidden');
-	exit(__('Вызов файлов плагина напрямую запрещен.', 'acs'));
+	exit(__('Access Denied.', 'acs'));
 }
 
 
@@ -43,7 +43,7 @@ class AddSnippetProc{
 				$this->title = $data[0]['title'];
 				$this->code = $data[0]['code'];
 			}else{
-				$this->p_msg = __("Данные для редактирования не доступны","acs" ); 
+				$this->p_msg = __("Error, plugin can't edit this","acs" ); 
 			}
 		}
 
@@ -56,12 +56,12 @@ class AddSnippetProc{
 		$this->is_edit = intval($_POST['is_edit']);
 
 		if(empty($this->title)){ 
-			$this->p_msg = __('Сохранение не выполнено, пожалуйста укажите название сниппета', 'acs' );
+			$this->p_msg = __('Error: Please set snippet name before save.', 'acs' );
 			return;
 		}
 
 		if(empty($this->code)){ 
-			$this->p_msg = __('Сохранение не выполнено, вы не указали код сниппета', 'acs' );
+			$this->p_msg = __('Error: Snippet code not exist', 'acs' );
 			return;
 		}
 
@@ -93,8 +93,8 @@ class AddSnippetProc{
 				);
 		}
 
-		if($ret != false) $this->p_msg = __('Готово!','acs');
-		else $this->p_msg = __('К несчастью сниппет не может быть добавлен из-за проблем с базой данных.','acs');
+		if($ret != false) $this->p_msg = __('Successful!','acs');
+		else $this->p_msg = __('Unfortunately we cannot save this snippet. Some problems with database.','acs');
 
 	}
 

@@ -9,7 +9,7 @@
 # Защита от мудаков
 if (!defined( 'ABSPATH' )){
 	header('HTTP/1.0 403 Forbidden');
-	exit(__('Вызов файлов плагина напрямую запрещен.', 'acs'));
+	exit(__('Access Denied.', 'acs'));
 }
 
 require_once( AFTCC__PLUGIN_DIR . "proc/index.proc.php");
@@ -44,23 +44,23 @@ $items_table->prepare_items();
 
 
 <div class="wrap">
-	<h2><?php _e('Сниппеты кода.','acs'); ?>
-		<a href="?page=aft_snippets/new_snippet" class="add-new-h2"><?php _e('Добавить','acs'); ?></a>
+	<h2><?php _e('Code snippets.','acs'); ?>
+		<a href="?page=aft_snippets/new_snippet" class="add-new-h2"><?php _e('Add New Snippet','acs'); ?></a>
 	</h2>
 	<div class="aft_info">
 		<p><img style="width:60px;" src='<?php echo AFTCC__PLUGIN_URL . "img/icon.png";?>' id="main_i"></img></p>
 		<p>
-			<?php _e('Плагин позволяющий размещать произвольные блоки кода в тексте материала.','acs'); ?>
+			<?php _e('Code Snippets Extended id powerful plugin, that allows you to create code snippets & embed it into posts or pages easily.','acs'); ?>
 		</p>
+		<p><?php _e('Dear user, i am - Kudashev Roman, author of this plugin. I am from Russia, but not from Moscow, i am from Ural. If you like this plugin - please donate me and help me to improve my work. <b>I have nothing to eat</b>, only potatoes, the prices are increasing every day. I am work for 7000 rubles per month(100$) and dont have money. Please help me if you can.', 'acs'); ?></p>
+		<p>Webmoney: Z395586459766, R343924802694</p>
 	</div>
 	<form method="post">
-
-
 		<input type="hidden" name="page" value="clt_page" /> <!-- Этот параметр нужен для $_REQUEST['page'] --> 
 		<?php
-			$items_table->search_box(__('Поиск по названию','acs'), 'search_by_title');
+			$items_table->search_box(__('Search by name','acs'), 'search_by_title');
 			$items_table->display(); 
 		?>
 	 </form>
-	 <p><?php _e('Автор', 'acs'); ?>: &copy; <a href="http://aftamat4ik.ru" target="_blank"><?php _e('ваш Гарри.','acs'); ?></a></p>
+	 <p><?php _e('Author', 'acs'); ?>: &copy; <a href="http://aftamat4ik.ru" target="_blank"><?php _e('Roman Kudashev','acs'); ?></a></p>
 </div>
