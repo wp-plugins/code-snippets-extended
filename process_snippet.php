@@ -29,7 +29,7 @@ function proc_shortcode($data){
 	$code = $arr[0]['code'];
 	
 	ob_start();
-	eval("?> ".$code. " <?php;");
+	eval("?> ".trim($code). " <?");
 	$res = ob_get_contents();
 	ob_clean();
 	ob_end_flush();

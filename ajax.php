@@ -26,11 +26,8 @@ class AftCCAjax{
 		// Всплывающую форму формируем тут.
 		global $wpdb;
 		$table_name = $wpdb->base_prefix.'aft_cc';
-		$query = $wpdb->prepare("SELECT * FROM {$table_name}
-										WHERE `mode`='on'", 
-										array($id,)
-										);
-		$arr = $wpdb->get_results($query, ARRAY_A);
+		
+		$arr = $wpdb->get_results("SELECT * FROM ".$table_name." WHERE mode='on';", ARRAY_A);
 		if(count($arr) == 0){ echo "<div class='white_popup'>" . __('Snippets not creted Yet.','acs') . "<p></div>"; die();
 		}
 		// Тут формирует html нашего iframe
@@ -66,7 +63,7 @@ class AftCCAjax{
 				 * http://stackoverflow.com/questions/10441410/what-happened-when-i-use-multi-ob-start-without-ob-end-clean-or-ob-end-flush
 				 * 
 				 */
-		eval("?> ".$code. " <?php;");
+		eval("?> ".trim($code). " <?");
 		$res = ob_get_contents();
 		ob_clean();
 		ob_end_flush();

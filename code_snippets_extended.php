@@ -8,7 +8,7 @@
  *	Plugin Name: Code Snippets Extended
  *	Plugin URI: http://aftamat4ik.ru/
  *	Description: Plugin to crete snippets from JS, PHP or CSS code
- *	Version: 1.3.2
+ *	Version: 1.3.3
  *	Author: Kudashev Roman
  *	Author URI: http://aftamat4ik.ru/
  *	License: GPLv2 or later
